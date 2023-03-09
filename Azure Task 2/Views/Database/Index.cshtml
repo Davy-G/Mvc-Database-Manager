@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Azure_Task_2.Models.Product>
+
+@{
+
+    ViewBag.Title = "Products";
+    Layout = "/Views/Shared/_DatabaseLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products</title>
+</head>
+<body >
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table" style="color:white">
+        <tr>
+            <th>
+                @Html.ActionLink("Name", "OrderByName")
+            </th>
+            <th>
+                @Html.ActionLink("Product Number", "OrderByProductNum")
+            </th>
+            <th>
+                @Html.ActionLink("Color", "OrderByColor")
+            </th>
+            <th>
+                @Html.ActionLink("Date Modified ", "OrderByDate")
+            </th>
+            <th>
+                @Html.ActionLink("Price", "OrderByPrice")
+            </th>
+
+            <th>
+                @Html.ActionLink("Weight", "OrderByWeight")
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td style="color: cyan">
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    </table>
+</body>
+</html>

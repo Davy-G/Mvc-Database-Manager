@@ -1,0 +1,68 @@
+﻿
+#LoginDiv {
+    width: 440px;
+    overflow: hidden;
+    margin: auto;
+    margin: auto;
+    padding: 80px;
+    background: #23463f;
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #277582;
+    padding: 20px;
+}
+
+label {
+    color: #08ffd1;
+    font-size: 17px;
+}
+
+#Uname {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#Pass {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#log {
+    width: 280px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+    
+}
+
+span {
+    color: white;
+    font-size: 17px;
+}
+
+p{
+    color: white;
+    text-align:center;
+}
+#Username-error {
+    padding-left: 8px;
+    color: red;
+}
+
+#Password-error {
+    padding-left: 8px;
+    color: red;
+}
+}
+

@@ -1,0 +1,51 @@
+﻿
+@model Azure_Task_2.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "/Views/Shared/_LoginLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>Login Form</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/Login.css">
+</head>
+ <body id="LoginPage">
+
+    <h2 style="color: cyan">Login Page</h2><br>
+    <div class="login" id="LoginDiv">
+       @using (Html.BeginForm("Authorise" ,"Login",FormMethod.Post, new {@id = "LoginForm" })) {
+             <label >
+                <b style="padding-left: 100px" >
+                    Username
+                </b>
+            </label>
+             <div>
+                 @Html.EditorFor(model => model.Username, new { htmlAttributes = new { style = "width: 500px" } });
+             </div>
+            @Html.ValidationMessageFor(model => model.Username)
+            <br><br>
+            <label>
+                <b style="padding-left: 100px">
+                    Password
+                </b>
+            </label>
+
+            <div>
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { style = "width: 500px" } });
+            </div>
+           
+            @Html.ValidationMessageFor(model => model.Password)
+            <br><br>
+            <button name="LoginButton" id="log" type="submit">Log In</button>
+            <br><br>
+        }
+    </div>
+ </body>
+</html>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    } 
