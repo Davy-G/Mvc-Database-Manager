@@ -1,11 +1,7 @@
-# Database manager built on mvc 
-
+# Database manager built on mvc
 ## Description
-
 a project for azure certification (placed top 3 by score)
-
 ## Features
-
 <ul>
   <li>Login Page With Authentication</li>
   <li>Crud database management</li>
