@@ -10,3 +10,5 @@ a project for azure certification (placed top 3 by score)
   <li>Entity Framework for accessing the database</li>
 
 </ul>
+
+<img src="https://qu.ax/btd.png">
